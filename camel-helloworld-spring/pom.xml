@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mastertheboss.camel</groupId>
-  <artifactId>camel-helloworld</artifactId>
+  <artifactId>camel-helloworld-spring</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
 
-  <name>A Camel Route</name>
+  <name>A Camel Spring Route</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,14 +29,13 @@
   </dependencyManagement>
 
   <dependencies>
-
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
-      <artifactId>camel-main</artifactId>
+      <artifactId>camel-spring</artifactId>
     </dependency>
 
     <!-- logging -->
@@ -60,21 +58,16 @@
     <!-- testing -->
     <dependency>
       <groupId>org.apache.camel</groupId>
-      <artifactId>camel-test</artifactId>
+      <artifactId>camel-test-spring</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
     <defaultGoal>install</defaultGoal>
 
     <plugins>
-
-      <plugin>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-maven-plugin</artifactId>
-      </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -93,17 +86,12 @@
         </configuration>
       </plugin>
 
-      <!-- Allows the example to be run via 'mvn compile exec:java' -->
+      <!-- allows the route to be ran via 'mvn camel:run' -->
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
-        <configuration>
-          <mainClass>com.mastertheboss.camel.MainApp</mainClass>
-          <includePluginDependencies>false</includePluginDependencies>
-        </configuration>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-maven-plugin</artifactId>
+        <version>3.0.0</version>
       </plugin>
-
     </plugins>
   </build>
 
