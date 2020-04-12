@@ -28,9 +28,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- * Unit test of our routes
- */
+
 public class ReportIncidentRoutesTest {
 
     // should be the same address as we have in our route

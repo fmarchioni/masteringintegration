@@ -4,7 +4,7 @@
 
 This is a modified version of the CXF WebService Proxy Example from Camel distribution (https://github.com/apache/camel-examples/tree/master/examples/camel-example-cxf-proxy)
 
-Instead of using a Camel proxy as facade, we use a JAX-WS Web service which is deployed in a Java EE Container.
+Instead of using a Camel proxy as target endpoint, we use a JAX-WS Web service which is deployed in a Java EE Container.
 
 === Run
 
