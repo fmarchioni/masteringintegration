@@ -5,19 +5,14 @@ package com.example.camel.jdbc;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.apache.camel.main.Main;
 import org.apache.camel.support.DefaultRegistry;
 import org.apache.commons.dbcp.*;
 import javax.sql.DataSource;
 
-/**
- * A Camel Application
- */
+
 public class MainApp {
 
-    /**
-     * A main() so we can easily run these routing rules in our IDE
-     */
+
     public static void main(String... args) throws Exception {
         // use Camels Main class
 
