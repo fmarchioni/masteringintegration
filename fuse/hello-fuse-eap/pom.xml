@@ -52,7 +52,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
      
     </dependencies>
   </dependencyManagement>
@@ -82,11 +81,7 @@
             <artifactId>jakarta.inject-api</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jboss.spec.javax.ejb</groupId>
-            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
-            <scope>provided</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_4.0_spec</artifactId>
