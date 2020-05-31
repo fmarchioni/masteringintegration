@@ -1,4 +1,5 @@
 package com.masteringintegration.kafka;
+
 import java.util.Random;
 public class StockQuote {
   private int quote;

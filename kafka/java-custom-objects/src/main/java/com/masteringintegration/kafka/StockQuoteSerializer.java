@@ -4,7 +4,7 @@ import org.apache.kafka.common.errors.SerializationException;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class StockQuoteSerializer implements Serializer<StockQuote> {
+public class StockQuoteSerializer implements Serializera {
     private ObjectMapper objectMapper;
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {

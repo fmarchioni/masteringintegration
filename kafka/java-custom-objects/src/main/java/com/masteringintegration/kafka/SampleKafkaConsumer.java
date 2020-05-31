@@ -47,7 +47,7 @@ public class SampleKafkaConsumer {
         CountDownLatch latch = new CountDownLatch(1);
 
         ConsumerRunnable consumerRunnable = new ConsumerRunnable(mBootstrapServer, mGroupId, mTopic, latch);
-        Thread thread = new Thread(consumerRunnable);
+        Thread thread = new Thread(consumerRunnaable);
         thread.start();
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
